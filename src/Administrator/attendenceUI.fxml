@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gn.GNAvatarView?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import de.jensd.fx.glyphs.materialicons.MaterialIconView?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="830.0" style="-fx-background-color: #e7e6e6;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Administrator.AttendenceUIController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <center>
+            <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #ffffff;" styleClass="raised" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </BorderPane.margin>
+               <children>
+                  <TabPane prefHeight="615.0" prefWidth="790.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab text="Staff Enrolement">
+                           <content>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <VBox layoutX="22.0" layoutY="5.0" prefHeight="495.0" prefWidth="237.0" style="-fx-background-color: #ffffff;" styleClass="raised">
+                                       <children>
+                                          <HBox alignment="CENTER" prefHeight="34.0" prefWidth="262.0" style="-fx-background-color: #000000;">
+                                             <children>
+                                                <HBox fx:id="searchBox" alignment="CENTER" focusTraversable="true" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="38.0" prefWidth="239.0" styleClass="box-search">
+                                                   <children>
+                                                      <TextField fx:id="Search" minHeight="-Infinity" prefHeight="38.0" prefWidth="358.0" promptText="Search Staff.." style="-fx-border-color: transparent; -fx-background-color: transparent;" styleClass="text-white" />
+                                                      <Button alignment="CENTER" contentDisplay="GRAPHIC_ONLY" minHeight="-Infinity" mnemonicParsing="false" onAction="#getUserProfile" onMouseClicked="#clearText" prefHeight="38.0" prefWidth="15.0" styleClass="btn-transparent" text="Button" HBox.hgrow="ALWAYS">
+                                                         <cursor>
+                                                            <Cursor fx:constant="HAND" />
+                                                         </cursor>
+                                                         <graphic>
+                                                            <SVGPath fx:id="searchIcon" content="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" styleClass="text-white" />
+                                                         </graphic>
+                                                      </Button>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </HBox>
+                                          <GNAvatarView fx:id="imgDisplay">
+                                             <VBox.margin>
+                                                <Insets top="20.0" />
+                                             </VBox.margin>
+                                             <image>
+                                                <Image url="@../media/basic1-114_user_man-128.png" />
+                                             </image>
+                                          </GNAvatarView>
+                                          <HBox alignment="CENTER" prefHeight="32.0" prefWidth="262.0">
+                                             <children>
+                                                <Text fx:id="userName" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" styleClass="h5" text="User Full Name" />
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="BASELINE_CENTER" layoutX="10.0" layoutY="264.0" prefHeight="32.0" prefWidth="262.0">
+                                             <children>
+                                                <Text fx:id="userPost" fill="#06800e" strokeType="OUTSIDE" strokeWidth="0.0" text="User Post">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Text>
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="296.0" prefHeight="32.0" prefWidth="262.0">
+                                             <children>
+                                                <Text fill="#ff5c0b" strokeType="OUTSIDE" strokeWidth="0.0" text="User ID:">
+                                                   <HBox.margin>
+                                                      <Insets left="30.0" />
+                                                   </HBox.margin>
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Text>
+                                                <Separator prefHeight="7.0" prefWidth="145.0">
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" top="10.0" />
+                                                   </HBox.margin>
+                                                </Separator>
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="BASELINE_CENTER" layoutX="10.0" layoutY="296.0" prefHeight="32.0" prefWidth="262.0">
+                                             <children>
+                                                <Text fx:id="userID" fill="#06800e" strokeType="OUTSIDE" strokeWidth="0.0" text="PS10/1004">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Text>
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="328.0" prefHeight="32.0" prefWidth="262.0">
+                                             <children>
+                                                <Text fill="#ff5c0b" strokeType="OUTSIDE" strokeWidth="0.0" text="Department">
+                                                   <HBox.margin>
+                                                      <Insets left="30.0" />
+                                                   </HBox.margin>
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Text>
+                                                <Separator prefHeight="7.0" prefWidth="145.0">
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" top="10.0" />
+                                                   </HBox.margin>
+                                                </Separator>
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="BASELINE_CENTER" layoutX="10.0" layoutY="360.0" prefHeight="32.0" prefWidth="262.0">
+                                             <children>
+                                                <Text fx:id="userDepartment" fill="#06800e" strokeType="OUTSIDE" strokeWidth="0.0" text="PS10/1004">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Text>
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="328.0" prefHeight="32.0" prefWidth="262.0">
+                                             <children>
+                                                <Text fill="#ff5c0b" strokeType="OUTSIDE" strokeWidth="0.0" text="Sepcialization">
+                                                   <HBox.margin>
+                                                      <Insets left="30.0" />
+                                                   </HBox.margin>
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Text>
+                                                <Separator prefHeight="5.0" prefWidth="134.0">
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" top="10.0" />
+                                                   </HBox.margin>
+                                                </Separator>
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="BASELINE_CENTER" layoutX="10.0" layoutY="424.0" prefHeight="32.0" prefWidth="262.0">
+                                             <children>
+                                                <Text fx:id="userSepcialization" fill="#06800e" strokeType="OUTSIDE" strokeWidth="0.0" text="PS10/1004">
+                                                   <font>
+                                                      <Font name="System Bold" size="12.0" />
+                                                   </font>
+                                                </Text>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                    <Text layoutX="329.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Staff Biometric Enrolement">
+                                       <font>
+                                          <Font name="System Bold" size="22.0" />
+                                       </font>
+                                    </Text>
+                                    <VBox layoutX="307.0" layoutY="107.0" prefHeight="148.0" prefWidth="164.0" style="-fx-background-color: #e7e6e6;">
+                                       <children>
+                                          <ImageView fx:id="fingerViewerEn" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                                       </children>
+                                    </VBox>
+                                    <Text layoutX="310.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Finger Print Enrolement">
+                                       <font>
+                                          <Font size="13.0" />
+                                       </font>
+                                    </Text>
+                                    <JFXButton alignment="CENTER" buttonType="RAISED" layoutX="306.0" layoutY="317.0" onAction="#getFingerscanner" prefHeight="25.0" prefWidth="174.0" styleClass="success" text="Scan Finger Print" textFill="WHITE" />
+                                    <JFXTextField fx:id="genCode" alignment="CENTER" editable="false" layoutX="324.0" layoutY="265.0" prefHeight="25.0" prefWidth="177.0" promptText="xxxxxxxxxxxxxx" />
+                                    <MaterialIconView glyphName="FINGERPRINT" layoutX="293.0" layoutY="59.0" size="30" />
+                                    <JFXButton alignment="CENTER" buttonType="RAISED" layoutX="303.0" layoutY="380.0" onAction="#getStaffEnrolement" prefHeight="34.0" prefWidth="317.0" style="-fx-background-color: #000000;" text="Enrole Staff" textFill="WHITE" />
+                                    <Text fx:id="readerStatus" layoutX="367.0" layoutY="460.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reader Status:">
+                                       <font>
+                                          <Font name="System Italic" size="12.0" />
+                                       </font>
+                                    </Text>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                      <Tab text="Sign In or Sign Out">
+                           <content>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <Separator layoutX="392.0" layoutY="124.0" orientation="VERTICAL" prefHeight="515.0" prefWidth="6.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="392.0" AnchorPane.topAnchor="0.0" />
+                                    <Text layoutX="113.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Staff Sign In">
+                                       <font>
+                                          <Font name="System Bold" size="22.0" />
+                                       </font>
+                                    </Text>
+                                    <Text layoutX="516.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Staff Sign Out">
+                                       <font>
+                                          <Font name="System Bold" size="22.0" />
+                                       </font>
+                                    </Text>
+                                    <JFXTextField fx:id="signOutID" layoutX="492.0" layoutY="114.0" prefHeight="25.0" prefWidth="199.0" promptText="Enter Staff ID" />
+                                    <JFXButton alignment="CENTER" buttonType="RAISED" layoutX="524.0" layoutY="151.0" onAction="#getSignOutUser" prefHeight="25.0" prefWidth="134.0" style="-fx-background-color: #f37736;" text="Search" textFill="WHITE" />
+                                    <JFXTextField fx:id="userNameDisplay" alignment="CENTER" editable="false" layoutX="494.0" layoutY="208.0" prefHeight="25.0" prefWidth="197.0" promptText="Staff Name" />
+                                    <JFXButton alignment="CENTER" buttonType="RAISED" layoutX="441.0" layoutY="460.0" onAction="#getSignoutVerification" prefHeight="34.0" prefWidth="317.0" styleClass="danger" text="Verify SignOut" textFill="WHITE" />
+                                    <JFXButton alignment="CENTER" buttonType="RAISED" layoutX="495.0" layoutY="409.0" onAction="#getSignoutScanner" prefHeight="25.0" prefWidth="208.0" styleClass="success" text="Scan Finger Print" textFill="WHITE" />
+                                    <VBox layoutX="496.0" layoutY="244.0" prefHeight="148.0" prefWidth="164.0" style="-fx-background-color: #e7e6e6;" styleClass="raised">
+                                       <children>
+                                          <ImageView fx:id="signoutScanViewer" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                                       </children>
+                                    </VBox>
+                                    <JFXButton alignment="CENTER" buttonType="RAISED" layoutX="28.0" layoutY="459.0" onAction="#getSigninVerification" prefHeight="34.0" prefWidth="317.0" styleClass="secondary" text="SignIn" textFill="WHITE" />
+                                    <JFXButton alignment="CENTER" buttonType="RAISED" layoutX="67.0" layoutY="405.0" onAction="#getSigninScanner" prefHeight="25.0" prefWidth="208.0" styleClass="success" text="Scan Finger Print" textFill="WHITE" />
+                                    <JFXTextField fx:id="signInstaffID" layoutX="78.0" layoutY="112.0" prefHeight="25.0" prefWidth="199.0" promptText="Enter Staff ID" />
+                                    <JFXButton alignment="CENTER" buttonType="RAISED" layoutX="110.0" layoutY="148.0" onAction="#getSigninUserID" prefHeight="25.0" prefWidth="134.0" style="-fx-background-color: #f37736;" text="Search" textFill="WHITE" />
+                                    <JFXTextField fx:id="signInNameDisplay" alignment="CENTER" editable="false" layoutX="45.0" layoutY="199.0" prefHeight="25.0" prefWidth="259.0" promptText="Staff Name" />
+                                    <VBox layoutX="72.0" layoutY="242.0" prefHeight="148.0" prefWidth="164.0" style="-fx-background-color: #e7e6e6;" styleClass="raised">
+                                       <children>
+                                          <ImageView fx:id="signinFingerViewer" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                                       </children>
+                                    </VBox>
+                                    <MaterialDesignIconView glyphName="FINGERPRINT" layoutX="152.0" layoutY="65.0" size="40" />
+                                    <MaterialDesignIconView glyphName="FINGERPRINT" layoutX="569.0" layoutY="65.0" size="40" />
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab text="Attendence List">
+                           <content>
+                              <AnchorPane prefHeight="473.0" prefWidth="500.0">
+                                 <children>
+                                    <Text fontSmoothingType="LCD" layoutX="127.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Attenedence List">
+                                       <font>
+                                          <Font size="23.0" />
+                                       </font>
+                                    </Text>
+                                    <HBox layoutX="-2.0" layoutY="58.0" prefHeight="3.0" prefWidth="790.0" style="-fx-background-color: #000000;" />
+                                    <FontAwesomeIconView glyphName="USER" layoutX="92.0" layoutY="40.0" size="20" />
+                                    <FontAwesomeIconView glyphName="SEARCH" layoutX="426.0" layoutY="41.0" size="20" />
+                                    <JFXTextField alignment="CENTER" layoutX="449.0" layoutY="22.0" onAction="#getAttStaff" prefHeight="25.0" prefWidth="249.0" promptText="Search  Staff " />
+                                    <TableView fx:id="StaffAttDisplay" accessibleRole="IMAGE_VIEW" layoutX="17.0" layoutY="70.0" prefHeight="424.0" prefWidth="750.0">
+                                       <columns>
+                                          <TableColumn fx:id="staffNameCA" prefWidth="200.0" text="Name" />
+                                          <TableColumn fx:id="staffIDCA" prefWidth="150.0" text="Staff ID" />
+                                          <TableColumn fx:id="departC" prefWidth="200.0" text="Department" />
+                                          <TableColumn fx:id="arrivalC" prefWidth="200.0" text="Arrival " />
+                                          <TableColumn fx:id="departureC" prefWidth="200.0" text="Departure" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                        <Tab text="Enroled Staff List">
+                           <content>
+                              <AnchorPane prefHeight="473.0" prefWidth="500.0">
+                                 <children>
+                                    <Text fontSmoothingType="LCD" layoutX="122.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enroled Staff List">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <HBox layoutX="-1.0" layoutY="48.0" prefHeight="3.0" prefWidth="800.0" style="-fx-background-color: #000000;" />
+                                    <FontAwesomeIconView glyphName="USER" layoutX="92.0" layoutY="29.0" size="20" />
+                                    <FontAwesomeIconView glyphName="SEARCH" layoutX="343.0" layoutY="29.0" size="20" />
+                                    <JFXTextField alignment="CENTER" layoutX="382.0" layoutY="9.0" onKeyPressed="#getStaffFromList" prefHeight="25.0" prefWidth="249.0" promptText="Search  Staff " />
+                                    <TableView fx:id="stafflistDisplayTable" layoutX="18.0" layoutY="63.0" prefHeight="440.0" prefWidth="750.0">
+                                       <columns>
+                                          <TableColumn fx:id="slNameC" prefWidth="200.0" text="Name" />
+                                          <TableColumn fx:id="slIDc" prefWidth="150.0" text="Staff ID" />
+                                          <TableColumn fx:id="slDepartmentC" prefWidth="200.0" text="Department" />
+                                          <TableColumn fx:id="slDateC" prefWidth="200.0" text="Date Created" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </Tab>
+                    </tabs>
+                  </TabPane>
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+   </children>
+   <stylesheets>
+      <URL value="@../theme/css/material-color.css" />
+      <URL value="@../theme/css/skeleton.css" />
+      <URL value="@../theme/css/light.css" />
+      <URL value="@../theme/css/bootstrap.css" />
+      <URL value="@../theme/css/shape.css" />
+      <URL value="@../theme/css/typographic.css" />
+      <URL value="@../theme/css/helpers.css" />
+      <URL value="@../theme/css/master.css" />
+   </stylesheets>
+</StackPane>

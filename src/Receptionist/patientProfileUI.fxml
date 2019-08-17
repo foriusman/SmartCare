@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gn.GNAvatarView?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="830.0" style="-fx-background-color: #eeeeee;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Receptionist.PatientProfileUIController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <StackPane.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </StackPane.margin>
+         <left>
+            <VBox prefHeight="560.0" prefWidth="262.0" style="-fx-background-color: #ffffff;" styleClass="raised" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="34.0" prefWidth="262.0" style="-fx-background-color: #000000;">
+                     <children>
+                        <HBox fx:id="searchBox" alignment="CENTER" focusTraversable="true" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="38.0" prefWidth="239.0" styleClass="box-search">
+                           <children>
+                              <TextField fx:id="Search" minHeight="-Infinity" prefHeight="38.0" prefWidth="358.0" promptText="Search Patient ID" style="-fx-border-color: transparent; -fx-background-color: transparent;" styleClass="text-white" />
+                              <Button alignment="CENTER" contentDisplay="GRAPHIC_ONLY" minHeight="-Infinity" mnemonicParsing="false" onAction="#getPatientProInfo" onMouseClicked="#clearText" prefHeight="38.0" prefWidth="15.0" styleClass="btn-transparent" text="Button" HBox.hgrow="ALWAYS">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <graphic>
+                                    <SVGPath fx:id="searchIcon" content="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" styleClass="text-white" />
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <GNAvatarView fx:id="imgDisplay">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                     <image>
+                        <Image url="@../media/basic1-114_user_man-128.png" />
+                     </image>
+                  </GNAvatarView>
+                  <HBox alignment="CENTER" prefHeight="32.0" prefWidth="262.0">
+                     <children>
+                        <Text fx:id="patientNameD" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" styleClass="h5" text="User Full Name" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="BASELINE_CENTER" layoutX="10.0" layoutY="264.0" prefHeight="32.0" prefWidth="262.0">
+                     <children>
+                        <Text fx:id="patientRank" fill="#06800e" strokeType="OUTSIDE" strokeWidth="0.0" text="User Post">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="296.0" prefHeight="32.0" prefWidth="262.0">
+                     <children>
+                        <Text fill="#ff5c0b" strokeType="OUTSIDE" strokeWidth="0.0" text="Patient ID:">
+                           <HBox.margin>
+                              <Insets left="30.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Text>
+                        <Separator prefHeight="7.0" prefWidth="145.0">
+                           <HBox.margin>
+                              <Insets left="5.0" top="10.0" />
+                           </HBox.margin>
+                        </Separator>
+                     </children>
+                  </HBox>
+                  <HBox alignment="BASELINE_CENTER" layoutX="10.0" layoutY="296.0" prefHeight="32.0" prefWidth="262.0">
+                     <children>
+                        <Text fx:id="patientIDD" fill="#06800e" strokeType="OUTSIDE" strokeWidth="0.0" text="PS10/1004">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="328.0" prefHeight="32.0" prefWidth="262.0">
+                     <children>
+                        <Text fill="#ff5c0b" strokeType="OUTSIDE" strokeWidth="0.0" text="Department">
+                           <HBox.margin>
+                              <Insets left="30.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Text>
+                        <Separator prefHeight="7.0" prefWidth="145.0">
+                           <HBox.margin>
+                              <Insets left="5.0" top="10.0" />
+                           </HBox.margin>
+                        </Separator>
+                     </children>
+                  </HBox>
+                  <HBox alignment="BASELINE_CENTER" layoutX="10.0" layoutY="360.0" prefHeight="32.0" prefWidth="262.0">
+                     <children>
+                        <Text fx:id="patDepartment" fill="#06800e" strokeType="OUTSIDE" strokeWidth="0.0" text="Mathematics">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="428.0" prefHeight="51.0" prefWidth="262.0">
+                     <children>
+                        <JFXButton onAction="#getPatientInfoDisplay" prefHeight="32.0" prefWidth="152.0" text="View Profile">
+                           <styleClass>
+                              <String fx:value="raised" />
+                              <String fx:value="round" />
+                              <String fx:value="success" />
+                           </styleClass>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </left>
+         <right>
+            <ScrollPane prefWidth="500.0" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </BorderPane.margin>
+               <content>
+                  <VBox alignment="TOP_CENTER" prefHeight="2000.0" prefWidth="450.0" style="-fx-background-color: #ffffff;">
+                     <children>
+                        <AnchorPane prefHeight="2000.0" prefWidth="452.0">
+                           <children>
+                              <GNAvatarView fx:id="patientPassport" layoutX="145.0" layoutY="46.0" prefHeight="140.0" prefWidth="136.0">
+                                 <image>
+                                    <Image url="@../media/basic1-114_user_man-128.png" />
+                                 </image>
+                              </GNAvatarView>
+                              <Text fontSmoothingType="LCD" layoutX="72.0" layoutY="271.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Personal Information">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Text>
+                              <FontAwesomeIconView glyphName="USER" layoutX="42.0" layoutY="272.0" size="20" />
+                              <Text layoutX="58.0" layoutY="319.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone Number:" />
+                              <JFXTextField fx:id="pMobile" editable="false" layoutX="154.0" layoutY="302.0" prefHeight="25.0" prefWidth="271.0" />
+                              <Text layoutX="58.0" layoutY="366.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email Address:" />
+                              <JFXTextField fx:id="pEmail" editable="false" layoutX="156.0" layoutY="342.0" prefHeight="25.0" prefWidth="267.0" />
+                              <Text layoutX="58.0" layoutY="407.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date of Birth:" />
+                              <Text layoutX="58.0" layoutY="448.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Marrital Status:" />
+                              <Text layoutX="58.0" layoutY="546.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address:" />
+                              <TextArea fx:id="pAddress" editable="false" layoutX="147.0" layoutY="527.0" prefHeight="115.0" prefWidth="282.0" />
+                              <Text layoutX="59.0" layoutY="490.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gender:" />
+                              <Text fontSmoothingType="LCD" layoutX="63.0" layoutY="705.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Official Information">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Text>
+                              <FontAwesomeIconView glyphName="FILE" layoutX="33.0" layoutY="706.0" size="20" />
+                              <Separator layoutX="1.0" layoutY="667.0" prefHeight="4.0" prefWidth="450.0" />
+                              <Text fontSmoothingType="LCD" layoutX="54.0" layoutY="746.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number:" />
+                              <JFXTextField fx:id="pID" editable="false" layoutX="146.0" layoutY="729.0" prefHeight="25.0" prefWidth="282.0" />
+                              <Text fontSmoothingType="LCD" layoutX="52.0" layoutY="805.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Department:" />
+                              <JFXTextField fx:id="pDepartment" editable="false" layoutX="146.0" layoutY="782.0" prefHeight="25.0" prefWidth="282.0" />
+                              <Text fontSmoothingType="LCD" layoutX="53.0" layoutY="854.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Rank:" />
+                              <Text fontSmoothingType="LCD" layoutX="55.0" layoutY="901.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Place of Birth:" />
+                              <JFXTextField fx:id="pPlaceofBrith" editable="false" layoutX="149.0" layoutY="880.0" prefHeight="25.0" prefWidth="282.0" />
+                              <Text fontSmoothingType="LCD" layoutX="56.0" layoutY="951.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Village" />
+                              <JFXTextField fx:id="pVillage" editable="false" layoutX="147.0" layoutY="930.0" prefHeight="25.0" prefWidth="282.0" />
+                              <Text fontSmoothingType="LCD" layoutX="51.0" layoutY="1000.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Town:" />
+                              <JFXTextField fx:id="pTown" editable="false" layoutX="147.0" layoutY="984.0" prefHeight="25.0" prefWidth="282.0" />
+                              <Text fontSmoothingType="LCD" layoutX="52.0" layoutY="1047.0" strokeType="OUTSIDE" strokeWidth="0.0" text="State:" />
+                              <Text fontSmoothingType="LCD" layoutX="53.0" layoutY="1103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="L.G.A." />
+                              <JFXTextField fx:id="pLGA" editable="false" layoutX="149.0" layoutY="1086.0" prefHeight="25.0" prefWidth="282.0" />
+                              <Text fontSmoothingType="LCD" layoutX="53.0" layoutY="1156.0" strokeType="OUTSIDE" strokeWidth="0.0" text="City" />
+                              <JFXTextField fx:id="PCityofR" editable="false" layoutX="147.0" layoutY="1142.0" prefHeight="25.0" prefWidth="282.0" />
+                              <Text fontSmoothingType="LCD" layoutX="51.0" layoutY="1209.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Allegy:" />
+                              <JFXTextField fx:id="pAllegy" editable="false" layoutX="149.0" layoutY="1192.0" prefHeight="25.0" prefWidth="282.0" />
+                              <Text fontSmoothingType="LCD" layoutX="51.0" layoutY="1261.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Disablity:" />
+                              <JFXTextField fx:id="pDisbility" editable="false" layoutX="148.0" layoutY="1243.0" prefHeight="25.0" prefWidth="282.0" />
+                              <Text fontSmoothingType="LCD" layoutX="48.0" layoutY="1314.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Blood Group:" />
+                              <Text layoutX="48.0" layoutY="1421.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Address:" />
+                              <TextArea fx:id="pSchoolAddress" editable="false" layoutX="145.0" layoutY="1402.0" prefHeight="140.0" prefWidth="282.0" />
+                              <Text fontSmoothingType="LCD" layoutX="49.0" layoutY="1360.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Genotype:" />
+                              <Separator layoutX="2.0" layoutY="1548.0" prefHeight="16.0" prefWidth="450.0" />
+                              <Text fontSmoothingType="LCD" layoutX="68.0" layoutY="1605.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Next of Kin Information">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Text>
+                              <FontAwesomeIconView glyphName="USER" layoutX="37.0" layoutY="1605.0" size="20" />
+                              <Text fontSmoothingType="LCD" layoutX="51.0" layoutY="1641.0" strokeType="OUTSIDE" strokeWidth="0.0" text="First Name:" />
+                              <JFXTextField fx:id="pkFname" editable="false" layoutX="151.0" layoutY="1624.0" prefHeight="25.0" prefWidth="271.0" />
+                              <Text layoutX="51.0" layoutY="1693.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone Number:" />
+                              <JFXTextField fx:id="pkMobile" editable="false" layoutX="151.0" layoutY="1669.0" prefHeight="25.0" prefWidth="271.0" />
+                              <Text layoutX="52.0" layoutY="1736.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email Address:" />
+                              <JFXTextField fx:id="pkEmail" editable="false" layoutX="152.0" layoutY="1715.0" prefHeight="25.0" prefWidth="271.0" />
+                              <Text fontSmoothingType="LCD" layoutX="53.0" layoutY="1779.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Relationship:" />
+                              <JFXTextField fx:id="pkRelationship" editable="false" layoutX="152.0" layoutY="1759.0" prefHeight="25.0" prefWidth="271.0" />
+                              <Text layoutX="51.0" layoutY="1826.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gender:" />
+                              <JFXTextField fx:id="pDOB" editable="false" layoutX="155.0" layoutY="382.0" prefHeight="25.0" prefWidth="271.0" />
+                              <JFXTextField fx:id="mStatus" editable="false" layoutX="155.0" layoutY="427.0" prefHeight="25.0" prefWidth="271.0" />
+                              <JFXTextField fx:id="pGender" editable="false" layoutX="154.0" layoutY="468.0" prefHeight="25.0" prefWidth="271.0" />
+                              <JFXTextField fx:id="rank" editable="false" layoutX="150.0" layoutY="830.0" prefHeight="25.0" prefWidth="282.0" />
+                              <JFXTextField fx:id="stateO" editable="false" layoutX="148.0" layoutY="1031.0" prefHeight="25.0" prefWidth="282.0" />
+                              <JFXTextField fx:id="BLOODgrp" editable="false" layoutX="147.0" layoutY="1292.0" prefHeight="25.0" prefWidth="282.0" />
+                              <JFXTextField fx:id="genotype" editable="false" layoutX="148.0" layoutY="1342.0" prefHeight="25.0" prefWidth="282.0" />
+                              <JFXTextField fx:id="pkinGender" editable="false" layoutX="154.0" layoutY="1802.0" prefHeight="25.0" prefWidth="267.0" />
+                              <Text fx:id="patFullName" layoutX="166.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pateint Full Name" />
+                              <Separator layoutX="-1.0" layoutY="241.0" prefHeight="3.0" prefWidth="450.0" />
+                              <JFXButton layoutX="96.0" layoutY="1911.0" onAction="#getClearField" prefHeight="45.0" prefWidth="234.0" text="Clear Fields">
+                                 <styleClass>
+                                    <String fx:value="raised" />
+                                    <String fx:value="round" />
+                                    <String fx:value="warning" />
+                                 </styleClass>
+                              </JFXButton>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+               </content>
+            </ScrollPane>
+         </right>
+      </BorderPane>
+   </children>
+   <stylesheets>
+      <URL value="@../theme/css/material-color.css" />
+      <URL value="@../theme/css/skeleton.css" />
+      <URL value="@../theme/css/light.css" />
+      <URL value="@../theme/css/bootstrap.css" />
+      <URL value="@../theme/css/shape.css" />
+      <URL value="@../theme/css/typographic.css" />
+      <URL value="@../theme/css/helpers.css" />
+      <URL value="@../theme/css/master.css" />
+   </stylesheets>
+</StackPane>

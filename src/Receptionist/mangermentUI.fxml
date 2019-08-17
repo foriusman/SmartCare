@@ -1,0 +1,462 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Text?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="830.0" style="-fx-background-color: #eeeeee;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Receptionist.MangermentUIController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <center>
+            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+               </BorderPane.margin>
+               <children>
+                  <TabPane prefHeight="633.0" prefWidth="770.0" tabClosingPolicy="UNAVAILABLE">
+                     <tabs>
+                        <Tab text="Mangment Head">
+                           <content>
+                              <ScrollPane>
+                                 <content>
+                                    <VBox prefHeight="848.0" prefWidth="776.0" style="-fx-background-color: #ffffff;">
+                                       <children>
+                                          <AnchorPane prefHeight="890.0" prefWidth="776.0">
+                                             <children>
+                                                <VBox layoutX="67.0" layoutY="14.0" prefHeight="200.0" prefWidth="240.0">
+                                                   <children>
+                                                      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="250.0" style="-fx-border-color: -separator-color; -fx-background-color: -background-color;" styleClass="raised">
+                                                         <children>
+                                                            <ImageView fx:id="holder1img" fitHeight="168.0" fitWidth="213.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../media/m1.jpg" />
+                                                               </image>
+                                                               <VBox.margin>
+                                                                  <Insets top="5.0" />
+                                                               </VBox.margin>
+                                                            </ImageView>
+                                                            <Label fx:id="holder1Name" styleClass="h3" text="Card">
+                                                               <padding>
+                                                                  <Insets left="10.0" top="10.0" />
+                                                               </padding>
+                                                            </Label>
+                                                            <VBox alignment="CENTER">
+                                                               <children>
+                                                                  <Text fx:id="holder1post" strokeType="OUTSIDE" strokeWidth="0.0" text="Manger" />
+                                                               </children>
+                                                            </VBox>
+                                                            <HBox alignment="BOTTOM_RIGHT" VBox.vgrow="ALWAYS">
+                                                               <children>
+                                                                  <JFXButton contentDisplay="GRAPHIC_ONLY" prefWidth="50.0" ripplerFill="BLACK">
+                                                                     <styleClass>
+                                                                        <String fx:value="btn-transparent" />
+                                                                        <String fx:value="round" />
+                                                                        <String fx:value="btn-large" />
+                                                                     </styleClass>
+                                                                     <graphic>
+                                                                        <SVGPath content="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z" styleClass="icon" />
+                                                                     </graphic>
+                                                                  </JFXButton>
+                                                                  <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="312.0" layoutY="56.0" prefWidth="50.0" ripplerFill="BLACK">
+                                                                     <styleClass>
+                                                                        <String fx:value="btn-transparent" />
+                                                                        <String fx:value="round" />
+                                                                        <String fx:value="btn-large" />
+                                                                     </styleClass>
+                                                                     <graphic>
+                                                                        <MaterialDesignIconView glyphName="HEART" size="22" styleClass="icon" />
+                                                                     </graphic>
+                                                                  </JFXButton>
+                                                                  <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="312.0" layoutY="56.0" prefWidth="50.0" ripplerFill="BLACK">
+                                                                     <styleClass>
+                                                                        <String fx:value="btn-transparent" />
+                                                                        <String fx:value="round" />
+                                                                        <String fx:value="btn-large" />
+                                                                     </styleClass>
+                                                                     <graphic>
+                                                                        <SVGPath content="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" fill="#00000080" styleClass="icon" />
+                                                                     </graphic>
+                                                                  </JFXButton>
+                                                               </children>
+                                                               <VBox.margin>
+                                                                  <Insets bottom="5.0" right="5.0" />
+                                                               </VBox.margin>
+                                                            </HBox>
+                                                         </children>
+                                                         <VBox.margin>
+                                                            <Insets top="5.0" />
+                                                         </VBox.margin>
+                                                      </VBox>
+                                                   </children>
+                                                </VBox>
+                                                <VBox layoutX="405.0" layoutY="14.0" prefHeight="200.0" prefWidth="240.0">
+                                                   <children>
+                                                      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="250.0" style="-fx-border-color: -separator-color; -fx-background-color: -background-color;" styleClass="raised">
+                                                         <children>
+                                                            <ImageView fx:id="holder2img" fitHeight="168.0" fitWidth="236.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../media/pt1.jpg" />
+                                                               </image>
+                                                               <VBox.margin>
+                                                                  <Insets top="5.0" />
+                                                               </VBox.margin>
+                                                            </ImageView>
+                                                            <Label fx:id="holder2Name" styleClass="h3" text="Card">
+                                                               <padding>
+                                                                  <Insets left="10.0" top="10.0" />
+                                                               </padding>
+                                                            </Label>
+                                                            <VBox alignment="CENTER">
+                                                               <children>
+                                                                  <Text fx:id="holder2post" strokeType="OUTSIDE" strokeWidth="0.0" text="Manger" />
+                                                               </children>
+                                                            </VBox>
+                                                            <HBox alignment="BOTTOM_RIGHT" VBox.vgrow="ALWAYS">
+                                                               <children>
+                                                                  <JFXButton contentDisplay="GRAPHIC_ONLY" prefWidth="50.0" ripplerFill="BLACK">
+                                                                     <styleClass>
+                                                                        <String fx:value="btn-transparent" />
+                                                                        <String fx:value="round" />
+                                                                        <String fx:value="btn-large" />
+                                                                     </styleClass>
+                                                                     <graphic>
+                                                                        <SVGPath content="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z" styleClass="icon" />
+                                                                     </graphic>
+                                                                  </JFXButton>
+                                                                  <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="312.0" layoutY="56.0" prefWidth="50.0" ripplerFill="BLACK">
+                                                                     <styleClass>
+                                                                        <String fx:value="btn-transparent" />
+                                                                        <String fx:value="round" />
+                                                                        <String fx:value="btn-large" />
+                                                                     </styleClass>
+                                                                     <graphic>
+                                                                        <MaterialDesignIconView glyphName="HEART" size="22" styleClass="icon" />
+                                                                     </graphic>
+                                                                  </JFXButton>
+                                                                  <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="312.0" layoutY="56.0" prefWidth="50.0" ripplerFill="BLACK">
+                                                                     <styleClass>
+                                                                        <String fx:value="btn-transparent" />
+                                                                        <String fx:value="round" />
+                                                                        <String fx:value="btn-large" />
+                                                                     </styleClass>
+                                                                     <graphic>
+                                                                        <SVGPath content="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" fill="#00000080" styleClass="icon" />
+                                                                     </graphic>
+                                                                  </JFXButton>
+                                                               </children>
+                                                               <VBox.margin>
+                                                                  <Insets bottom="5.0" right="5.0" />
+                                                               </VBox.margin>
+                                                            </HBox>
+                                                         </children>
+                                                         <VBox.margin>
+                                                            <Insets top="5.0" />
+                                                         </VBox.margin>
+                                                      </VBox>
+                                                   </children>
+                                                </VBox>
+                                                <VBox layoutX="405.0" layoutY="314.0" prefHeight="200.0" prefWidth="240.0">
+                                                   <children>
+                                                      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="250.0" style="-fx-border-color: -separator-color; -fx-background-color: -background-color;" styleClass="raised">
+                                                         <children>
+                                                            <ImageView fx:id="holder4img" fitHeight="168.0" fitWidth="236.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../media/pt5.jpg" />
+                                                               </image>
+                                                               <VBox.margin>
+                                                                  <Insets top="5.0" />
+                                                               </VBox.margin>
+                                                            </ImageView>
+                                                            <Label fx:id="holder4Name" styleClass="h3" text="Card">
+                                                               <padding>
+                                                                  <Insets left="10.0" top="10.0" />
+                                                               </padding>
+                                                            </Label>
+                                                            <VBox alignment="CENTER">
+                                                               <children>
+                                                                  <Text fx:id="holder4post" strokeType="OUTSIDE" strokeWidth="0.0" text="Manger" />
+                                                               </children>
+                                                            </VBox>
+                                                            <HBox alignment="BOTTOM_RIGHT" VBox.vgrow="ALWAYS">
+                                                               <children>
+                                                                  <JFXButton contentDisplay="GRAPHIC_ONLY" prefWidth="50.0" ripplerFill="BLACK">
+                                                                     <styleClass>
+                                                                        <String fx:value="btn-transparent" />
+                                                                        <String fx:value="round" />
+                                                                        <String fx:value="btn-large" />
+                                                                     </styleClass>
+                                                                     <graphic>
+                                                                        <SVGPath content="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z" styleClass="icon" />
+                                                                     </graphic>
+                                                                  </JFXButton>
+                                                                  <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="312.0" layoutY="56.0" prefWidth="50.0" ripplerFill="BLACK">
+                                                                     <styleClass>
+                                                                        <String fx:value="btn-transparent" />
+                                                                        <String fx:value="round" />
+                                                                        <String fx:value="btn-large" />
+                                                                     </styleClass>
+                                                                     <graphic>
+                                                                        <MaterialDesignIconView glyphName="HEART" size="22" styleClass="icon" />
+                                                                     </graphic>
+                                                                  </JFXButton>
+                                                                  <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="312.0" layoutY="56.0" prefWidth="50.0" ripplerFill="BLACK">
+                                                                     <styleClass>
+                                                                        <String fx:value="btn-transparent" />
+                                                                        <String fx:value="round" />
+                                                                        <String fx:value="btn-large" />
+                                                                     </styleClass>
+                                                                     <graphic>
+                                                                        <SVGPath content="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" fill="#00000080" styleClass="icon" />
+                                                                     </graphic>
+                                                                  </JFXButton>
+                                                               </children>
+                                                               <VBox.margin>
+                                                                  <Insets bottom="5.0" right="5.0" />
+                                                               </VBox.margin>
+                                                            </HBox>
+                                                         </children>
+                                                         <VBox.margin>
+                                                            <Insets top="5.0" />
+                                                         </VBox.margin>
+                                                      </VBox>
+                                                   </children>
+                                                </VBox>
+                                                <VBox layoutX="67.0" layoutY="314.0" prefHeight="200.0" prefWidth="240.0">
+                                                   <children>
+                                                      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="250.0" style="-fx-border-color: -separator-color; -fx-background-color: -background-color;" styleClass="raised">
+                                                         <children>
+                                                            <ImageView fx:id="holder3img" fitHeight="168.0" fitWidth="236.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../media/pt3.jpg" />
+                                                               </image>
+                                                               <VBox.margin>
+                                                                  <Insets top="5.0" />
+                                                               </VBox.margin>
+                                                            </ImageView>
+                                                            <Label fx:id="holder3Name" styleClass="h3" text="Card">
+                                                               <padding>
+                                                                  <Insets left="10.0" top="10.0" />
+                                                               </padding>
+                                                            </Label>
+                                                            <VBox alignment="CENTER">
+                                                               <children>
+                                                                  <Text fx:id="holder3post" strokeType="OUTSIDE" strokeWidth="0.0" text="Manger" />
+                                                               </children>
+                                                            </VBox>
+                                                            <HBox alignment="BOTTOM_RIGHT" VBox.vgrow="ALWAYS">
+                                                               <children>
+                                                                  <JFXButton contentDisplay="GRAPHIC_ONLY" prefWidth="50.0" ripplerFill="BLACK">
+                                                                     <styleClass>
+                                                                        <String fx:value="btn-transparent" />
+                                                                        <String fx:value="round" />
+                                                                        <String fx:value="btn-large" />
+                                                                     </styleClass>
+                                                                     <graphic>
+                                                                        <SVGPath content="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z" styleClass="icon" />
+                                                                     </graphic>
+                                                                  </JFXButton>
+                                                                  <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="312.0" layoutY="56.0" prefWidth="50.0" ripplerFill="BLACK">
+                                                                     <styleClass>
+                                                                        <String fx:value="btn-transparent" />
+                                                                        <String fx:value="round" />
+                                                                        <String fx:value="btn-large" />
+                                                                     </styleClass>
+                                                                     <graphic>
+                                                                        <MaterialDesignIconView glyphName="HEART" size="22" styleClass="icon" />
+                                                                     </graphic>
+                                                                  </JFXButton>
+                                                                  <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="312.0" layoutY="56.0" prefWidth="50.0" ripplerFill="BLACK">
+                                                                     <styleClass>
+                                                                        <String fx:value="btn-transparent" />
+                                                                        <String fx:value="round" />
+                                                                        <String fx:value="btn-large" />
+                                                                     </styleClass>
+                                                                     <graphic>
+                                                                        <SVGPath content="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" fill="#00000080" styleClass="icon" />
+                                                                     </graphic>
+                                                                  </JFXButton>
+                                                               </children>
+                                                               <VBox.margin>
+                                                                  <Insets bottom="5.0" right="5.0" />
+                                                               </VBox.margin>
+                                                            </HBox>
+                                                         </children>
+                                                         <VBox.margin>
+                                                            <Insets top="5.0" />
+                                                         </VBox.margin>
+                                                      </VBox>
+                                                   </children>
+                                                </VBox>
+                                                <VBox layoutX="408.0" layoutY="639.0" prefHeight="200.0" prefWidth="240.0">
+                                                   <children>
+                                                      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="250.0" style="-fx-border-color: -separator-color; -fx-background-color: -background-color;" styleClass="raised">
+                                                         <children>
+                                                            <ImageView fx:id="holder6img" fitHeight="168.0" fitWidth="236.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../media/pt4.jpg" />
+                                                               </image>
+                                                               <VBox.margin>
+                                                                  <Insets top="5.0" />
+                                                               </VBox.margin>
+                                                            </ImageView>
+                                                            <Label fx:id="holder6name" styleClass="h3" text="Card">
+                                                               <padding>
+                                                                  <Insets left="10.0" top="10.0" />
+                                                               </padding>
+                                                            </Label>
+                                                            <VBox alignment="CENTER">
+                                                               <children>
+                                                                  <Text fx:id="holder6post" strokeType="OUTSIDE" strokeWidth="0.0" text="Manger" />
+                                                               </children>
+                                                            </VBox>
+                                                            <HBox alignment="BOTTOM_RIGHT" VBox.vgrow="ALWAYS">
+                                                               <children>
+                                                                  <JFXButton contentDisplay="GRAPHIC_ONLY" prefWidth="50.0" ripplerFill="BLACK">
+                                                                     <styleClass>
+                                                                        <String fx:value="btn-transparent" />
+                                                                        <String fx:value="round" />
+                                                                        <String fx:value="btn-large" />
+                                                                     </styleClass>
+                                                                     <graphic>
+                                                                        <SVGPath content="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z" styleClass="icon" />
+                                                                     </graphic>
+                                                                  </JFXButton>
+                                                                  <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="312.0" layoutY="56.0" prefWidth="50.0" ripplerFill="BLACK">
+                                                                     <styleClass>
+                                                                        <String fx:value="btn-transparent" />
+                                                                        <String fx:value="round" />
+                                                                        <String fx:value="btn-large" />
+                                                                     </styleClass>
+                                                                     <graphic>
+                                                                        <MaterialDesignIconView glyphName="HEART" size="22" styleClass="icon" />
+                                                                     </graphic>
+                                                                  </JFXButton>
+                                                                  <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="312.0" layoutY="56.0" prefWidth="50.0" ripplerFill="BLACK">
+                                                                     <styleClass>
+                                                                        <String fx:value="btn-transparent" />
+                                                                        <String fx:value="round" />
+                                                                        <String fx:value="btn-large" />
+                                                                     </styleClass>
+                                                                     <graphic>
+                                                                        <SVGPath content="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" fill="#00000080" styleClass="icon" />
+                                                                     </graphic>
+                                                                  </JFXButton>
+                                                               </children>
+                                                               <VBox.margin>
+                                                                  <Insets bottom="5.0" right="5.0" />
+                                                               </VBox.margin>
+                                                            </HBox>
+                                                         </children>
+                                                         <VBox.margin>
+                                                            <Insets top="5.0" />
+                                                         </VBox.margin>
+                                                      </VBox>
+                                                   </children>
+                                                </VBox>
+                                                <VBox layoutX="69.0" layoutY="639.0" prefHeight="200.0" prefWidth="240.0">
+                                                   <children>
+                                                      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="250.0" style="-fx-border-color: -separator-color; -fx-background-color: -background-color;" styleClass="raised">
+                                                         <children>
+                                                            <ImageView fx:id="holder5img" fitHeight="168.0" fitWidth="236.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../media/me.JPG" />
+                                                               </image>
+                                                               <VBox.margin>
+                                                                  <Insets top="5.0" />
+                                                               </VBox.margin>
+                                                            </ImageView>
+                                                            <Label fx:id="holder5name" styleClass="h3" text="Card">
+                                                               <padding>
+                                                                  <Insets left="10.0" top="10.0" />
+                                                               </padding>
+                                                            </Label>
+                                                            <VBox alignment="CENTER">
+                                                               <children>
+                                                                  <Text fx:id="holder5post" strokeType="OUTSIDE" strokeWidth="0.0" text="Manger" />
+                                                               </children>
+                                                            </VBox>
+                                                            <HBox alignment="BOTTOM_RIGHT" VBox.vgrow="ALWAYS">
+                                                               <children>
+                                                                  <JFXButton contentDisplay="GRAPHIC_ONLY" prefWidth="50.0" ripplerFill="BLACK">
+                                                                     <styleClass>
+                                                                        <String fx:value="btn-transparent" />
+                                                                        <String fx:value="round" />
+                                                                        <String fx:value="btn-large" />
+                                                                     </styleClass>
+                                                                     <graphic>
+                                                                        <SVGPath content="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z" styleClass="icon" />
+                                                                     </graphic>
+                                                                  </JFXButton>
+                                                                  <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="312.0" layoutY="56.0" prefWidth="50.0" ripplerFill="BLACK">
+                                                                     <styleClass>
+                                                                        <String fx:value="btn-transparent" />
+                                                                        <String fx:value="round" />
+                                                                        <String fx:value="btn-large" />
+                                                                     </styleClass>
+                                                                     <graphic>
+                                                                        <MaterialDesignIconView glyphName="HEART" size="22" styleClass="icon" />
+                                                                     </graphic>
+                                                                  </JFXButton>
+                                                                  <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="312.0" layoutY="56.0" prefWidth="50.0" ripplerFill="BLACK">
+                                                                     <styleClass>
+                                                                        <String fx:value="btn-transparent" />
+                                                                        <String fx:value="round" />
+                                                                        <String fx:value="btn-large" />
+                                                                     </styleClass>
+                                                                     <graphic>
+                                                                        <SVGPath content="M12 8c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm0 2c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 6c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z" fill="#00000080" styleClass="icon" />
+                                                                     </graphic>
+                                                                  </JFXButton>
+                                                               </children>
+                                                               <VBox.margin>
+                                                                  <Insets bottom="5.0" right="5.0" />
+                                                               </VBox.margin>
+                                                            </HBox>
+                                                         </children>
+                                                         <VBox.margin>
+                                                            <Insets top="5.0" />
+                                                         </VBox.margin>
+                                                      </VBox>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </AnchorPane>
+                                       </children>
+                                    </VBox>
+                                 </content>
+                              </ScrollPane>
+                           </content>
+                        </Tab>
+                     </tabs>
+                  </TabPane>
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+   </children>
+   <stylesheets>
+      <URL value="@../theme/css/material-color.css" />
+      <URL value="@../theme/css/skeleton.css" />
+      <URL value="@../theme/css/light.css" />
+      <URL value="@../theme/css/bootstrap.css" />
+      <URL value="@../theme/css/shape.css" />
+      <URL value="@../theme/css/typographic.css" />
+      <URL value="@../theme/css/helpers.css" />
+      <URL value="@../theme/css/master.css" />
+   </stylesheets>
+</StackPane>

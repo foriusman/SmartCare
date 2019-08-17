@@ -4,7 +4,7 @@
  *Department of computer science 
  *Ahmadu Bello Univeresity Zaria
  */
-package com.gn.theme.skin;
+package theme.skin;
 
 import com.sun.javafx.scene.control.skin.TextFieldSkin;
 import javafx.event.EventHandler;

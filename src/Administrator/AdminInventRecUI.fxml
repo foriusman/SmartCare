@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="830.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Administrator.AdminRequestUIController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <StackPane.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </StackPane.margin>
+         <center>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #eeeeee;" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox alignment="CENTER_LEFT" prefHeight="562.0" prefWidth="790.0">
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </VBox.margin>
+                     <children>
+                        <AnchorPane prefHeight="508.0" prefWidth="750.0" style="-fx-background-color: #ffffff;" styleClass="raised">
+                           <VBox.margin>
+                              <Insets bottom="20.0" left="10.0" right="20.0" top="20.0" />
+                           </VBox.margin>
+                           <children>
+                              <HBox layoutX="17.0" layoutY="78.0" prefHeight="378.0" prefWidth="686.0">
+                                 <children>
+                                    <TableView fx:id="inventoryTableView" prefHeight="252.0" prefWidth="693.0">
+                                       <columns>
+                                          <TableColumn fx:id="snC" prefWidth="75.0" sortType="DESCENDING" text="SN" />
+                                          <TableColumn fx:id="itemC" prefWidth="250.0" sortType="DESCENDING" text="Item Name" />
+                                          <TableColumn fx:id="quantityC" prefWidth="100.0" sortType="DESCENDING" text="Quantity" />
+                                          <TableColumn fx:id="timeC" prefWidth="100.0" sortType="DESCENDING" text="Time" />
+                                          <TableColumn fx:id="recentC" prefWidth="150.0" sortType="DESCENDING" text="Recently Used by" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </HBox>
+                              <Text layoutX="74.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Department Inventory:">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Text>
+                              <JFXComboBox fx:id="departmentName" layoutX="211.0" layoutY="24.0" prefHeight="19.0" prefWidth="224.0" />
+                              <FontAwesomeIconView glyphName="SEARCH" layoutX="46.0" layoutY="53.0" size="20" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+   </children>
+   <stylesheets>
+      <URL value="@../theme/css/material-color.css" />
+      <URL value="@../theme/css/skeleton.css" />
+      <URL value="@../theme/css/light.css" />
+      <URL value="@../theme/css/bootstrap.css" />
+      <URL value="@../theme/css/shape.css" />
+      <URL value="@../theme/css/typographic.css" />
+      <URL value="@../theme/css/helpers.css" />
+      <URL value="@../theme/css/master.css" />
+   </stylesheets>
+</StackPane>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="830.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Receptionist.InPatientUIController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <StackPane.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </StackPane.margin>
+         <center>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #eeeeee;" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox alignment="CENTER_LEFT" prefHeight="562.0" prefWidth="790.0">
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </VBox.margin>
+                     <children>
+                        <AnchorPane prefHeight="508.0" prefWidth="750.0" style="-fx-background-color: #ffffff;" styleClass="raised">
+                           <VBox.margin>
+                              <Insets bottom="20.0" left="10.0" right="20.0" top="20.0" />
+                           </VBox.margin>
+                           <children>
+                              <HBox layoutX="17.0" layoutY="44.0" prefHeight="419.0" prefWidth="686.0">
+                                 <children>
+                                    <TableView fx:id="inpatientTableview" prefHeight="252.0" prefWidth="693.0">
+                                       <columns>
+                                          <TableColumn fx:id="snC" prefWidth="75.0" text="SN" />
+                                          <TableColumn fx:id="patientidC" prefWidth="120.0" text="Patient ID" />
+                                          <TableColumn fx:id="pnameC" prefWidth="200.0" text="Name" />
+                                          <TableColumn fx:id="genderC" prefWidth="150.0" text="Gender" />
+                                          <TableColumn fx:id="wardC" prefWidth="150.0" text="Ward" />
+                                          <TableColumn fx:id="roomNoC" prefWidth="150.0" text="Room No" />
+                                          <TableColumn fx:id="statusC" prefWidth="200.0" text="Addmitted By" />
+                                          <TableColumn fx:id="addDC" prefWidth="150.0" text="Addmitted Date" />
+                                          <TableColumn fx:id="disCharegeC" prefWidth="150.0" text="Discharege Date" />
+                                       </columns>
+                                       <contextMenu>
+                                          <ContextMenu>
+                                             <items>
+                                                <MenuItem mnemonicParsing="false" text="Edit" />
+                                                <MenuItem mnemonicParsing="false" text="Delete" />
+                                                <MenuItem mnemonicParsing="false" text="Update Image" />
+                                             </items>
+                                          </ContextMenu>
+                                       </contextMenu>
+                                    </TableView>
+                                 </children>
+                              </HBox>
+                              <FontAwesomeIconView glyphName="SEARCH" layoutX="72.0" layoutY="23.0" />
+                              <Text layoutX="93.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search Patient:" />
+                              <JFXTextField fx:id="searchBar" layoutX="180.0" layoutY="6.0" onAction="#getSearchResult" prefHeight="25.0" prefWidth="183.0" promptText="Enter Patient ID" styleClass="rounded" />
+                              <Button layoutX="408.0" mnemonicParsing="false" onAction="#getRefreshed" prefHeight="27.0" prefWidth="79.0" styleClass="secondary" text="Refresh" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+   </children>
+   <stylesheets>
+      <URL value="@../theme/css/material-color.css" />
+      <URL value="@../theme/css/skeleton.css" />
+      <URL value="@../theme/css/light.css" />
+      <URL value="@../theme/css/bootstrap.css" />
+      <URL value="@../theme/css/shape.css" />
+      <URL value="@../theme/css/typographic.css" />
+      <URL value="@../theme/css/helpers.css" />
+      <URL value="@../theme/css/master.css" />
+   </stylesheets>
+</StackPane>

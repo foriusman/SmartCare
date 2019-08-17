@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gn.GNAvatarView?>
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.SVGPath?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="830.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Administrator.ScheduleUIController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <StackPane.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </StackPane.margin>
+         <center>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #eeeeee;" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox alignment="TOP_CENTER" prefHeight="562.0" prefWidth="790.0" styleClass="raised">
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </VBox.margin>
+                     <children>
+                        <TabPane prefHeight="540.0" prefWidth="750.0" tabClosingPolicy="UNAVAILABLE">
+                          <tabs>
+                            <Tab text="General Schedule">
+                                 <content>
+                                    <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+                                       <children>
+                                          <FontAwesomeIconView glyphName="TH_LIST" layoutX="53.0" layoutY="42.0" size="30" />
+                                          <Text layoutX="92.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="h4" text="General Staff Schedule" />
+                                          <JFXTextField fx:id="scheduleStaffSearch" layoutX="339.0" layoutY="15.0" onAction="#getscheduleStaff" prefHeight="25.0" prefWidth="184.0" promptText="Enter Staff ID" styleClass="round" />
+                                          <FontAwesomeIconView glyphName="SEARCH" layoutX="300.0" layoutY="40.0" size="30" />
+                                          <Button layoutX="537.0" layoutY="6.0" mnemonicParsing="false" onAction="#getRefreshedScheduleStaff" prefWidth="129.0" styleClass="primary" text="Button">
+                                             <graphic>
+                                                <FontAwesomeIconView fill="WHITE" glyphName="REFRESH" />
+                                             </graphic>
+                                          </Button>
+                                          <TableView fx:id="scheduleTableView" layoutX="1.0" layoutY="61.0" prefHeight="413.0" prefWidth="750.0">
+                                            <columns>
+                                              <TableColumn fx:id="snC" prefWidth="75.0" text="SN" />
+                                              <TableColumn fx:id="staffidC" prefWidth="120.0" text="Staff  ID" />
+                                                <TableColumn fx:id="nameC" prefWidth="200.0" text="Name" />
+                                                <TableColumn fx:id="dayC" prefWidth="100.0" text="Day" />
+                                                <TableColumn fx:id="dateC" prefWidth="100.0" text="Duty Date" />
+                                                <TableColumn fx:id="stimeC" prefWidth="75.0" text="Start Time" />
+                                                <TableColumn fx:id="endTimeC" prefWidth="75.0" text="End Time" />
+                                                <TableColumn fx:id="staffTypC" prefWidth="150.0" text="Staff Type" />
+                                                <TableColumn fx:id="maindateC" prefWidth="100.0" text="Date" />
+                                            </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                            <Tab text="Add Schedule">
+                                 <content>
+                                    <ScrollPane>
+                                       <content>
+                                          <AnchorPane prefHeight="621.0" prefWidth="757.0" style="-fx-background-color: #ffffff;">
+                                             <children>
+                                                <VBox layoutX="11.0" layoutY="24.0" prefHeight="560.0" prefWidth="262.0" style="-fx-background-color: #ffffff;" styleClass="raised">
+                                                   <children>
+                                                      <HBox alignment="CENTER" prefHeight="34.0" prefWidth="262.0" style="-fx-background-color: #000000;">
+                                                         <children>
+                                                            <HBox fx:id="searchBox" alignment="CENTER" focusTraversable="true" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="38.0" prefWidth="239.0" styleClass="box-search">
+                                                               <children>
+                                                                  <TextField fx:id="Search" minHeight="-Infinity" prefHeight="38.0" prefWidth="358.0" promptText="Search Staff.." style="-fx-border-color: transparent; -fx-background-color: transparent;" styleClass="text-white" />
+                                                                  <Button alignment="CENTER" contentDisplay="GRAPHIC_ONLY" minHeight="-Infinity" mnemonicParsing="false" onAction="#getUserProfile" onMouseClicked="#clearText" prefHeight="38.0" prefWidth="15.0" styleClass="btn-transparent" text="Button" HBox.hgrow="ALWAYS">
+                                                                     <cursor>
+                                                                        <Cursor fx:constant="HAND" />
+                                                                     </cursor>
+                                                                     <graphic>
+                                                                        <SVGPath fx:id="searchIcon" content="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" styleClass="text-white" />
+                                                                     </graphic>
+                                                                  </Button>
+                                                               </children>
+                                                            </HBox>
+                                                         </children>
+                                                      </HBox>
+                                                      <GNAvatarView fx:id="imgDisplay">
+                                                         <VBox.margin>
+                                                            <Insets top="20.0" />
+                                                         </VBox.margin>
+                                                         <image>
+                                                            <Image url="@../media/basic1-114_user_man-128.png" />
+                                                         </image>
+                                                      </GNAvatarView>
+                                                      <HBox alignment="CENTER" prefHeight="32.0" prefWidth="262.0">
+                                                         <children>
+                                                            <Text fx:id="userName" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" styleClass="h5" text="User Full Name" />
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox alignment="BASELINE_CENTER" layoutX="10.0" layoutY="264.0" prefHeight="32.0" prefWidth="262.0">
+                                                         <children>
+                                                            <Text fx:id="userPost" fill="#06800e" strokeType="OUTSIDE" strokeWidth="0.0" text="User Post">
+                                                               <font>
+                                                                  <Font name="System Bold" size="12.0" />
+                                                               </font>
+                                                            </Text>
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="296.0" prefHeight="32.0" prefWidth="262.0">
+                                                         <children>
+                                                            <Text fill="#ff5c0b" strokeType="OUTSIDE" strokeWidth="0.0" text="User ID:">
+                                                               <HBox.margin>
+                                                                  <Insets left="30.0" />
+                                                               </HBox.margin>
+                                                               <font>
+                                                                  <Font name="System Bold" size="12.0" />
+                                                               </font>
+                                                            </Text>
+                                                            <Separator prefHeight="7.0" prefWidth="145.0">
+                                                               <HBox.margin>
+                                                                  <Insets left="5.0" top="10.0" />
+                                                               </HBox.margin>
+                                                            </Separator>
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox alignment="BASELINE_CENTER" layoutX="10.0" layoutY="296.0" prefHeight="32.0" prefWidth="262.0">
+                                                         <children>
+                                                            <Text fx:id="userID" fill="#06800e" strokeType="OUTSIDE" strokeWidth="0.0" text="PS10/1004">
+                                                               <font>
+                                                                  <Font name="System Bold" size="12.0" />
+                                                               </font>
+                                                            </Text>
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="328.0" prefHeight="32.0" prefWidth="262.0">
+                                                         <children>
+                                                            <Text fill="#ff5c0b" strokeType="OUTSIDE" strokeWidth="0.0" text="Department">
+                                                               <HBox.margin>
+                                                                  <Insets left="30.0" />
+                                                               </HBox.margin>
+                                                               <font>
+                                                                  <Font name="System Bold" size="12.0" />
+                                                               </font>
+                                                            </Text>
+                                                            <Separator prefHeight="7.0" prefWidth="145.0">
+                                                               <HBox.margin>
+                                                                  <Insets left="5.0" top="10.0" />
+                                                               </HBox.margin>
+                                                            </Separator>
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox alignment="BASELINE_CENTER" layoutX="10.0" layoutY="360.0" prefHeight="32.0" prefWidth="262.0">
+                                                         <children>
+                                                            <Text fx:id="userDepartment" fill="#06800e" strokeType="OUTSIDE" strokeWidth="0.0" text="PS10/1004">
+                                                               <font>
+                                                                  <Font name="System Bold" size="12.0" />
+                                                               </font>
+                                                            </Text>
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="328.0" prefHeight="32.0" prefWidth="262.0">
+                                                         <children>
+                                                            <Text fill="#ff5c0b" strokeType="OUTSIDE" strokeWidth="0.0" text="Sepcialization">
+                                                               <HBox.margin>
+                                                                  <Insets left="30.0" />
+                                                               </HBox.margin>
+                                                               <font>
+                                                                  <Font name="System Bold" size="12.0" />
+                                                               </font>
+                                                            </Text>
+                                                            <Separator prefHeight="5.0" prefWidth="134.0">
+                                                               <HBox.margin>
+                                                                  <Insets left="5.0" top="10.0" />
+                                                               </HBox.margin>
+                                                            </Separator>
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox alignment="BASELINE_CENTER" layoutX="10.0" layoutY="424.0" prefHeight="32.0" prefWidth="262.0">
+                                                         <children>
+                                                            <Text fx:id="userSepcialization" fill="#06800e" strokeType="OUTSIDE" strokeWidth="0.0" text="PS10/1004">
+                                                               <font>
+                                                                  <Font name="System Bold" size="12.0" />
+                                                               </font>
+                                                            </Text>
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox alignment="BASELINE_CENTER" layoutX="10.0" layoutY="492.0" prefHeight="32.0" prefWidth="262.0">
+                                                         <children>
+                                                            <JFXButton onAction="#getAddSchedule" prefHeight="32.0" prefWidth="155.0" styleClass="primary" text="Add Schedule" />
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </VBox>
+                                                <FontAwesomeIconView glyphName="USER_CIRCLE" layoutX="318.0" layoutY="44.0" size="25" />
+                                                <Text layoutX="358.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Staff:" />
+                                                <JFXTextField fx:id="currentStaffName" editable="false" layoutX="456.0" layoutY="22.0" prefHeight="25.0" prefWidth="208.0" />
+                                                <FontAwesomeIconView glyphName="ADDRESS_BOOK" layoutX="318.0" layoutY="90.0" size="25" />
+                                                <Text layoutX="358.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Staff ID:" />
+                                                <JFXTextField fx:id="currentStaffID" editable="false" layoutX="458.0" layoutY="68.0" prefHeight="25.0" prefWidth="208.0" />
+                                                <HBox alignment="CENTER_LEFT" layoutX="280.0" layoutY="150.0" prefHeight="40.0" prefWidth="454.0" styleClass="light-green">
+                                                   <children>
+                                                      <FontAwesomeIconView fill="WHITE" glyphName="CALENDAR_PLUS_ALT" size="25">
+                                                         <HBox.margin>
+                                                            <Insets left="135.0" />
+                                                         </HBox.margin>
+                                                      </FontAwesomeIconView>
+                                                      <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Set Staff Schedule">
+                                                         <font>
+                                                            <Font name="System Bold" size="16.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Text>
+                                                   </children>
+                                                </HBox>
+                                                <Text layoutX="481.0" layoutY="216.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Day of the week" />
+                                                <FontAwesomeIconView glyphName="INDENT" layoutX="445.0" layoutY="222.0" size="25" />
+                                                <JFXComboBox fx:id="dayPicker" layoutX="373.0" layoutY="230.0" prefHeight="42.0" prefWidth="259.0" />
+                                                <Text layoutX="479.0" layoutY="383.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Starting Time" />
+                                                <FontAwesomeIconView glyphName="CLOCK_ALT" layoutX="443.0" layoutY="389.0" size="25" />
+                                                <JFXTimePicker fx:id="sTimePicker" layoutX="376.0" layoutY="401.0" prefHeight="40.0" prefWidth="264.0" />
+                                                <Text layoutX="479.0" layoutY="469.0" strokeType="OUTSIDE" strokeWidth="0.0" text="End Time" />
+                                                <JFXTimePicker fx:id="eTimePicker" layoutX="376.0" layoutY="491.0" prefHeight="40.0" prefWidth="264.0" />
+                                                <MaterialDesignIconView glyphName="TIMER" layoutX="444.0" layoutY="473.0" size="25" text="" />
+                                                <Button layoutX="405.0" layoutY="548.0" mnemonicParsing="false" onAction="#getaddMySchedule" prefWidth="209.0" styleClass="secondary" text="Add to Schedule">
+                                                   <graphic>
+                                                      <FontAwesomeIconView fill="WHITE" glyphName="PLUS_SQUARE" size="20" />
+                                                   </graphic>
+                                                   <font>
+                                                      <Font size="18.0" />
+                                                   </font>
+                                                </Button>
+                                                <FontAwesomeIconView glyphName="STAR_HALF_EMPTY" layoutX="318.0" layoutY="130.0" size="25" />
+                                                <Text layoutX="358.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current Staff Post:" />
+                                                <JFXTextField fx:id="currentStaffPostC" editable="false" layoutX="458.0" layoutY="108.0" prefHeight="25.0" prefWidth="208.0" />
+                                                <Text layoutX="479.0" layoutY="303.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date" />
+                                                <FontAwesomeIconView glyphName="CALENDAR_CHECK_ALT" layoutX="443.0" layoutY="309.0" size="25" />
+                                                <JFXDatePicker fx:id="udatePicker" layoutX="370.0" layoutY="324.0" prefHeight="35.0" prefWidth="264.0" />
+                                             </children>
+                                          </AnchorPane>
+                                       </content>
+                                    </ScrollPane>
+                                 </content>
+                              </Tab>
+                          </tabs>
+                        </TabPane>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+   </children>
+   <stylesheets>
+      <URL value="@../theme/css/material-color.css" />
+      <URL value="@../theme/css/skeleton.css" />
+      <URL value="@../theme/css/light.css" />
+      <URL value="@../theme/css/bootstrap.css" />
+      <URL value="@../theme/css/shape.css" />
+      <URL value="@../theme/css/typographic.css" />
+      <URL value="@../theme/css/helpers.css" />
+      <URL value="@../theme/css/master.css" />
+   </stylesheets>
+</StackPane>

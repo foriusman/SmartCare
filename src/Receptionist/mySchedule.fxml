@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="830.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Receptionist.MyScheduleController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <StackPane.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </StackPane.margin>
+         <center>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #eeeeee;" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox alignment="TOP_CENTER" prefHeight="562.0" prefWidth="790.0" styleClass="raised">
+                     <VBox.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </VBox.margin>
+                     <children>
+                        <TabPane prefHeight="540.0" prefWidth="750.0" tabClosingPolicy="UNAVAILABLE">
+                           <tabs>
+                              <Tab text="My Schedule">
+                                 <content>
+                                    <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+                                       <children>
+                                          <FontAwesomeIconView glyphName="TH_LIST" layoutX="53.0" layoutY="42.0" size="30" />
+                                          <Text layoutX="92.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="h4" text="General Staff Schedule" />
+                                          <JFXTextField fx:id="scheduleStaffSearch" layoutX="339.0" layoutY="15.0" onAction="#getscheduleStaff" prefHeight="25.0" prefWidth="184.0" promptText="Enter Staff ID" styleClass="round" />
+                                          <FontAwesomeIconView glyphName="SEARCH" layoutX="300.0" layoutY="40.0" size="30" />
+                                          <Button layoutX="537.0" layoutY="6.0" mnemonicParsing="false" onAction="#getRefreshedScheduleStaff" prefWidth="129.0" styleClass="primary" text="Button">
+                                             <graphic>
+                                                <FontAwesomeIconView fill="WHITE" glyphName="REFRESH" />
+                                             </graphic>
+                                          </Button>
+                                          <TableView fx:id="scheduleTableView" layoutX="1.0" layoutY="61.0" prefHeight="413.0" prefWidth="750.0">
+                                             <columns>
+                                                <TableColumn fx:id="snC" prefWidth="75.0" text="SN" />
+                                                <TableColumn fx:id="staffidC" prefWidth="120.0" text="Staff  ID" />
+                                                <TableColumn fx:id="nameC" prefWidth="200.0" text="Name" />
+                                                <TableColumn fx:id="dayC" prefWidth="100.0" text="Day" />
+                                                <TableColumn fx:id="dateC" prefWidth="100.0" text="Duty Date" />
+                                                <TableColumn fx:id="stimeC" prefWidth="75.0" text="Start Time" />
+                                                <TableColumn fx:id="endTimeC" prefWidth="75.0" text="End Time" />
+                                                <TableColumn fx:id="staffTypC" prefWidth="150.0" text="Staff Type" />
+                                                <TableColumn fx:id="maindateC" prefWidth="100.0" text="Date" />
+                                             </columns>
+                                          </TableView>
+                                       </children>
+                                    </AnchorPane>
+                                 </content>
+                              </Tab>
+                           </tabs>
+                        </TabPane>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+   </children>
+   <stylesheets>
+      <URL value="@../theme/css/material-color.css" />
+      <URL value="@../theme/css/skeleton.css" />
+      <URL value="@../theme/css/light.css" />
+      <URL value="@../theme/css/bootstrap.css" />
+      <URL value="@../theme/css/shape.css" />
+      <URL value="@../theme/css/typographic.css" />
+      <URL value="@../theme/css/helpers.css" />
+      <URL value="@../theme/css/master.css" />
+   </stylesheets>
+</StackPane>

@@ -4,7 +4,7 @@
  *Department of computer science 
  *Ahmadu Bello Univeresity Zaria
  */
-package com.gn.theme.skin;
+package theme.skin;
 
 import javafx.scene.Cursor;
 import javafx.scene.control.TextField;

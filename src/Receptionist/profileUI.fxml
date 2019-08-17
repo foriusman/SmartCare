@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.gn.GNAvatarView?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import org.controlsfx.control.Rating?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="830.0" style="-fx-background-color: #eeeeee;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Receptionist.ProfileUIController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0">
+         <StackPane.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </StackPane.margin>
+         <left>
+            <VBox prefHeight="560.0" prefWidth="262.0" style="-fx-background-color: #ffffff;" styleClass="raised" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="34.0" prefWidth="262.0" style="-fx-background-color: #000000;">
+                     <children>
+                        <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="My Profile">
+                           <font>
+                              <Font name="System Bold" size="17.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <GNAvatarView>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                     <image>
+                        <Image url="@../media/me.JPG" />
+                     </image>
+                  </GNAvatarView>
+                  <HBox alignment="CENTER" prefHeight="32.0" prefWidth="262.0">
+                     <children>
+                        <Text fx:id="userName" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" styleClass="h5" text="User Full Name" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="BASELINE_CENTER" layoutX="10.0" layoutY="264.0" prefHeight="32.0" prefWidth="262.0">
+                     <children>
+                        <Text fx:id="userPost" fill="#06800e" strokeType="OUTSIDE" strokeWidth="0.0" text="User Post">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="296.0" prefHeight="32.0" prefWidth="262.0">
+                     <children>
+                        <Text fill="#ff5c0b" strokeType="OUTSIDE" strokeWidth="0.0" text="User ID:">
+                           <HBox.margin>
+                              <Insets left="30.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Text>
+                        <Separator prefHeight="7.0" prefWidth="145.0">
+                           <HBox.margin>
+                              <Insets left="5.0" top="10.0" />
+                           </HBox.margin>
+                        </Separator>
+                     </children>
+                  </HBox>
+                  <HBox alignment="BASELINE_CENTER" layoutX="10.0" layoutY="296.0" prefHeight="32.0" prefWidth="262.0">
+                     <children>
+                        <Text fx:id="userID" fill="#06800e" strokeType="OUTSIDE" strokeWidth="0.0" text="PS10/1004">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="328.0" prefHeight="32.0" prefWidth="262.0">
+                     <children>
+                        <Text fill="#ff5c0b" strokeType="OUTSIDE" strokeWidth="0.0" text="Department">
+                           <HBox.margin>
+                              <Insets left="30.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Text>
+                        <Separator prefHeight="7.0" prefWidth="145.0">
+                           <HBox.margin>
+                              <Insets left="5.0" top="10.0" />
+                           </HBox.margin>
+                        </Separator>
+                     </children>
+                  </HBox>
+                  <HBox alignment="BASELINE_CENTER" layoutX="10.0" layoutY="360.0" prefHeight="32.0" prefWidth="262.0">
+                     <children>
+                        <Text fx:id="userDepartment" fill="#06800e" strokeType="OUTSIDE" strokeWidth="0.0" text="PS10/1004">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="328.0" prefHeight="32.0" prefWidth="262.0">
+                     <children>
+                        <Text fill="#ff5c0b" strokeType="OUTSIDE" strokeWidth="0.0" text="Sepcialization">
+                           <HBox.margin>
+                              <Insets left="30.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Text>
+                        <Separator prefHeight="5.0" prefWidth="134.0">
+                           <HBox.margin>
+                              <Insets left="5.0" top="10.0" />
+                           </HBox.margin>
+                        </Separator>
+                     </children>
+                  </HBox>
+                  <HBox alignment="BASELINE_CENTER" layoutX="10.0" layoutY="424.0" prefHeight="32.0" prefWidth="262.0">
+                     <children>
+                        <Text fx:id="userSepcialization" fill="#06800e" strokeType="OUTSIDE" strokeWidth="0.0" text="PS10/1004">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </left>
+         <center>
+            <VBox alignment="BASELINE_CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #ffffff;" styleClass="raised" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </BorderPane.margin>
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="31.0" prefWidth="488.0">
+                     <children>
+                        <FontAwesomeIconView glyphName="USER" size="20">
+                           <HBox.margin>
+                              <Insets left="50.0" />
+                           </HBox.margin>
+                        </FontAwesomeIconView>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" styleClass="h5" text="About">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Text>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="15.0" prefHeight="2.0" prefWidth="488.0" style="-fx-background-color: #000000;" />
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="15.0" prefHeight="31.0" prefWidth="488.0">
+                     <children>
+                        <FontAwesomeIconView fill="#059a25" glyphName="PHONE" size="20">
+                           <HBox.margin>
+                              <Insets left="100.0" />
+                           </HBox.margin>
+                        </FontAwesomeIconView>
+                        <Text fill="#059416" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" styleClass="h5" text="Phone Number:">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Text>
+                        <Label fx:id="userMobile" text="0xxxxxxxxxx">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="48.0" prefHeight="93.0" prefWidth="488.0">
+                     <children>
+                        <FontAwesomeIconView fill="#059a25" glyphName="HOME" size="20">
+                           <HBox.margin>
+                              <Insets left="100.0" />
+                           </HBox.margin>
+                        </FontAwesomeIconView>
+                        <Text fill="#059416" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" styleClass="h5" text="Address:">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Text>
+                        <JFXTextArea fx:id="userAddress" editable="false" prefHeight="38.0" prefWidth="264.0">
+                           <HBox.margin>
+                              <Insets bottom="20.0" left="10.0" right="30.0" top="5.0" />
+                           </HBox.margin>
+                        </JFXTextArea>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="58.0" prefHeight="31.0" prefWidth="488.0">
+                     <children>
+                        <FontAwesomeIconView fill="#059a25" glyphName="ENVELOPE" size="20">
+                           <HBox.margin>
+                              <Insets left="100.0" />
+                           </HBox.margin>
+                        </FontAwesomeIconView>
+                        <Text fill="#059416" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" styleClass="h5" text="Email Address:">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Text>
+                        <Label fx:id="userEmail" text="someone@example.com">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="192.0" prefHeight="31.0" prefWidth="488.0">
+                     <children>
+                        <FontAwesomeIconView fill="#059a25" glyphName="CIRCLE" size="20">
+                           <HBox.margin>
+                              <Insets left="100.0" />
+                           </HBox.margin>
+                        </FontAwesomeIconView>
+                        <Text fill="#059416" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" styleClass="h5" text="Gender:">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Text>
+                        <Label fx:id="userGender" text="Male">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="233.0" prefHeight="31.0" prefWidth="488.0">
+                     <children>
+                        <FontAwesomeIconView fill="#059a25" glyphName="USER_PLUS" size="20">
+                           <HBox.margin>
+                              <Insets left="100.0" />
+                           </HBox.margin>
+                        </FontAwesomeIconView>
+                        <Text fill="#059416" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" styleClass="h5" text="Staffing:">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Text>
+                        <Label fx:id="userStaffing" text="Full Time">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="274.0" prefHeight="31.0" prefWidth="488.0">
+                     <children>
+                        <FontAwesomeIconView fill="#059a25" glyphName="FILE" size="20">
+                           <HBox.margin>
+                              <Insets left="100.0" />
+                           </HBox.margin>
+                        </FontAwesomeIconView>
+                        <Text fill="#059416" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" styleClass="h5" text="Employment Year:">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Text>
+                        <Label fx:id="userEY" text="June, 2019">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <VBox prefHeight="73.0" prefWidth="641.0">
+                     <children>
+                        <Label style="-fx-text-fill: -text-color;" text="Rankings" />
+                        <HBox alignment="CENTER_LEFT" spacing="10.0">
+                           <children>
+                              <Label fx:id="note" style="-fx-font-weight: bold;" styleClass="h3" text="8" />
+                              <Rating fx:id="rating" prefHeight="33.0" prefWidth="205.0" rating="5.0" updateOnHover="true" />
+                           </children>
+                        </HBox>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="100.0" />
+                     </VBox.margin>
+                  </VBox>
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+   </children>
+   <stylesheets>
+      <URL value="@../theme/css/material-color.css" />
+      <URL value="@../theme/css/skeleton.css" />
+      <URL value="@../theme/css/light.css" />
+      <URL value="@../theme/css/bootstrap.css" />
+      <URL value="@../theme/css/shape.css" />
+      <URL value="@../theme/css/typographic.css" />
+      <URL value="@../theme/css/helpers.css" />
+      <URL value="@../theme/css/master.css" />
+   </stylesheets>
+</StackPane>
